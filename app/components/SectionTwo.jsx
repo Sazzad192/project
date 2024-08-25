@@ -19,7 +19,7 @@ export default function SectionTwo() {
         they have asked us more than 3 times to teach their employees about
         various things. to improve their skills
       </p>
-      <div className="flex justify-center lg:justify-between gap-6 lg:gap-[90px] items-center pt-[50px] flex-wrap">
+      <div className="flex justify-center lg:justify-between gap-6 lg:gap-[90px] items-center pt-[50px] flex-wrap lg:flex-nowrap">
         {images.map((item) => (
           <Image
             key={item.id}
@@ -27,7 +27,7 @@ export default function SectionTwo() {
             alt={item.url}
             width={150}
             height={47}
-            className="w-[111px] lg:w-[150px] h-9 lg:h-[40px]"
+            className="w-[111px] lg:w-[150px] h-9 lg:h-[47px]"
           />
         ))}
       </div>
