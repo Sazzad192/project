@@ -7,7 +7,7 @@ export const navLinks = [
 ]
 
 export const heroTextHead = (
-    <h1 className="text-center md:text-left text-6xl font-semibold leading-[90px]">
+    <h1 className="text-center lg:text-left text-2xl lg:text-6xl font-semibold leading-[42px] lg:leading-[90px]">
         There is always <br/> something new for 
         <br/> us to lear
     </h1>

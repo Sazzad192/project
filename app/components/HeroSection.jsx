@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Container from "@/components/Container";
@@ -17,12 +18,12 @@ import {
 
 export default function HeroSection() {
   return (
-    <div className="w-full h-[677px] bg-secondary-500 text-white">
-      <Container>
-        <nav className="hidden lg:flex justify-between items-center pt-6 pb-12">
+    <div className="w-full h-[523px] lg:h-[677px] bg-secondary-500 text-white relative">
+      <Container className="px-11 lg:px-0">
+        <nav className="flex justify-between items-center pt-6 pb-12">
           <Logo />
 
-          <section id="nav-links" className="flex gap-8 items-center">
+          <section id="nav-links" className="hidden lg:flex gap-8 items-center">
             {navLinks.map((item) => (
               <Link className="text-lg" key={item.id} href={item.href}>
                 {item.label}
@@ -30,7 +31,7 @@ export default function HeroSection() {
             ))}
           </section>
 
-          <section id="buttons" className="flex gap-5 items-center">
+          <section id="buttons" className="hidden lg:flex gap-5 items-center">
             <Link href="#" className="text-lg">
               Login
             </Link>
@@ -41,9 +42,9 @@ export default function HeroSection() {
         <section className="flex justify-between">
           <div className="w-full lg:w-[630px]">
             {heroTextHead}
-            <p className="text-secondary text-lg pt-3">{heroTextSubHead}</p>
+            <p className="text-xs lg:text-lg pt-2 lg:pt-3">{heroTextSubHead}</p>
 
-            <div className="flex items-center gap-5 pt-8">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-5 pt-8">
               <Button className="text-xl font-bold px-6 py-3 gap-4 rounded-[4px]">
                 Start Journey <ArrowRightUp className="w-3 h-3" />
               </Button>
@@ -54,6 +55,22 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+
+          <Image
+            src="/Play.png"
+            alt="Play"
+            width={46}
+            height={46}
+            className="block lg:hidden absolute w-[46px] h-[46px] bottom-8 right-5"
+          />
+
+          <Image
+            src="/Calender.png"
+            alt="Calender"
+            width={46}
+            height={46}
+            className="block lg:hidden absolute w-[46px] h-[46px] bottom-24 left-6"
+          />
 
           <div className="relative">
             <Image
@@ -77,7 +94,7 @@ export default function HeroSection() {
               alt="Play"
               width={46}
               height={46}
-              className="absolute w-[46px] h-[46px] top-[151px] right-[38px]"
+              className="absolute w-[46px] h-[46px] bottom-8 lg:bottom-0 lg:top-[151px] right-[38px]"
             />
 
             <Image

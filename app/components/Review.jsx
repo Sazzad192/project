@@ -31,20 +31,20 @@ export default function Review() {
   return (
     <div className="py-[87px] px-20 bg-[#F8F8F8]">
       <div className=" max-w-[635px] mx-auto">
-      <h3 className="text-4xl font-semibold pb-7 text-center">
+      <h3 className="text-lg lg:text-4x font-semibold pb-7 text-center">
         What do they
         <span className="text-primary-500"> say?</span>
       </h3>
-      <p className="text-[#808080] text-center">
+      <p className="text-[#808080] text-center text-xs lg:text-base">
         by subscribing now you will be able to access the material easily and
         cheaply, so you will be very efficient and benefit
       </p>
       </div>
-      <div className="flex justify-center gap-8 py-10">
+      <div className="flex justify-center gap-8 py-10 overflow-x-scroll no-scrollbar">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg text-center max-w-xs"
+            className="bg-white p-6 rounded-lg shadow-lg text-center min-w-[335px] lg:min-w-[413px]"
           >
             <div className="flex justify-center">
               <Image

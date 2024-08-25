@@ -14,11 +14,15 @@ export default function Home() {
     <div className="">
       <HeroSection/>
       <SectionTwo/>
+      <div className="px-11 lg:px-0">
       <SectionThree/>
+      </div>
       <SectionFour/>
       <PopularCourse/>
       <SkillShoot/>
+      <div className="px-11 lg:px-0">
       <SectionSeven/>
+      </div>
       <SubscribeSection/>
       <Review/>
       <Footer/>

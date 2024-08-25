@@ -25,27 +25,29 @@ function getYouTubeVideoId(url) {
   }
 }
 
-export default function CourseCard({ key, item }) {
+export default function CourseCard({ item }) {
   const video = getYouTubeVideoId(item.videoLink);
   return (
-    <div
-      key={key}
-      className="flex flex-col min-w-[413px] h-[510px] rounded-2xl shadow-lg bg-white text-[#2C2C2C]"
-    >
-      <div className="rounded-t-xl overflow-hidden">
+    <div className="flex flex-col min-w-[276px] lg:min-w-[413px] h-[353px] lg:h-[510px] rounded-2xl shadow-lg bg-white text-[#2C2C2C] transform transition-transform duration-300 ease-in-out">
+      {/* Video Section */}
+      <div className="rounded-t-2xl overflow-hidden relative">
         <iframe
           id="video"
           width="100%"
           height="240"
           src={`https://www.youtube.com/embed/${video}`}
-          title={item.teacherName}
+          title={item.courseName}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
-      <div className="p-7">
-        <p className="text-xl font-bold text-left">{item.courseName}</p>
+
+      {/* Course Details Section */}
+      <div className="p-[18px] lg:p-7">
+        <p className="text-sm lg:text-xl font-semibold lg:font-bold text-left">
+          {item.courseName}
+        </p>
         <div className="mt-5">
           <div className="flex justify-between items-center gap-4">
             <div className="flex justify-start items-center gap-3">
@@ -54,20 +56,26 @@ export default function CourseCard({ key, item }) {
                 alt={item.courseName}
                 width={41}
                 height={41}
-                className="w-[41px] h-[41px] rounded-full"
+                className="w-[30px] lg:w-[41px] h-[30px] lg:h-[41px] rounded-full"
               />
               <div className="flex flex-col justify-start items-start">
-                <p className="text-lg font-semibold text-[#2C2C2C]">
+                <p className="text-[10px] lg:text-lg font-medium lg:font-semibold text-[#2C2C2C]">
                   {item.teacherName}
                 </p>
-                <p className="text-sm font-normal text-gray-600">{item.role}</p>
+                <p className="text-[7px] lg:text-xs font-normal text-gray-600">
+                  {item.role}
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-1">
               <User className="w-[26px] h-[27px]" />
               <div className="flex flex-col justify-start items-start">
-                <p className="font-medium text-[#2C2C2C]">{item.participant}</p>
-                <p className="text-gray-500 text-xs font-medium">Participant</p>
+                <p className="text-[8px] lg:text-base font-medium text-[#2C2C2C]">
+                  {item.participant}
+                </p>
+                <p className="text-gray-500 text-[8px] lg:text-xs font-medium">
+                  Participant
+                </p>
               </div>
             </div>
           </div>
@@ -80,10 +88,9 @@ export default function CourseCard({ key, item }) {
             Buy Now
           </Button>
           <div>
-            <p className="text-2xl font-semibold">${item.price}</p>
-            <p className="text-xs font-normal text-gray-500">
+            <p className="text-base lg:text-2xl font-semibold">${item.price} <span className="text-[8px] lg:text-xs font-normal text-gray-500">
               /{item.videos} videos
-            </p>
+            </span> </p>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { RightMark } from "./svg/icons";
 
 const PricingCard = ({ plan }) => {
   return (
-    <div className={`flex flex-col w-[292px] rounded-2xl p-6 relative ${plan.mostPopular ? 'bg-secondary-500 text-white shadow-lg' : 'bg-white text-black'}`}>
+    <div className={`flex flex-col w-[292px] rounded-2xl p-6 relative ${plan.mostPopular ? 'bg-secondary-500 text-white shadow-2xl shadow-secondary-500' : 'bg-white text-black'}`}>
       {plan.mostPopular && (
         <div className="bg-primary-500 text-white text-[10px] font-semibold px-4 py-1 rounded-full self-end mb-2">
           Most Popular
@@ -28,9 +28,9 @@ const PricingCard = ({ plan }) => {
       <Image
         src="/GroupImgs.png"
         alt="GroupImgs"
-        width={606}
-        height={576}
-        className={`w-[606px] h-[576px] absolute -right-9 ${plan.mostPopular ? "block" : "hidden"}`}
+        width={150}
+        height={77}
+        className={`w-[150px] h-full absolute -right-9 ${plan.mostPopular ? "block" : "hidden"}`}
       />
     </div>
   );

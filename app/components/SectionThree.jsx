@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function SectionThree() {
   return (
-    <div className="bg-primary-400 max-w-7xl max-h-[300px] mx-auto rounded-[10px] mb-[100px] relative">
-      <div className="max-w-[586px] pl-[61px] py-[52px]">
-        <h3 className="text-4xl font-semibold pb-7">
+    <div className="bg-primary-400 max-w-7xl min-h-[300px] lg:max-h-[300px] mx-auto rounded-[10px] mb-[100px] relative">
+      <div className="max-w-[586px] pl-0 lg:pl-[61px] py-20 lg:py-[52px] flex flex-col justify-center items-center">
+        <h3 className="text-lg lg:text-4xl font-semibold pb-7 text-center lg:text-right">
           Happy <span className="text-primary-500">Chinese New Year</span>, 20%
           discount for you today
         </h3>
-        <Button variant="green" className="px-6 py-4 font-bold">
+        <Button variant="green" className="px-6 py-4 font-bold w-fit">
           Subscribe Course
         </Button>
       </div>
@@ -19,7 +19,7 @@ export default function SectionThree() {
         alt="Boy"
         width={289}
         height={433}
-        className="w-[289px] h-[433px] absolute bottom-0 right-[143px]"
+        className="hidden lg:block w-[289px] h-[433px] absolute bottom-0 right-[143px]"
       />
 
       <Image
@@ -27,14 +27,14 @@ export default function SectionThree() {
         alt="greenDesign"
         width={56}
         height={57}
-        className="w-[56px] h-[57px] absolute top-[67px] right-[404px]"
+        className="hidden lg:block w-[56px] h-[57px] absolute top-[67px] right-[404px]"
       />
       <Image
         src="/GreenSmallDesign.png"
         alt="greenSmall"
         width={51}
         height={47}
-        className="w-[51px] h-[47px] absolute bottom-[22px] right-[123px]"
+        className="hidden lg:block w-[51px] h-[47px] absolute bottom-[22px] right-[123px]"
       />
       <Image
         src="/SmallCircleDesign.png"
@@ -49,7 +49,7 @@ export default function SectionThree() {
         alt="SeconderySmallDesign"
         width={52}
         height={46}
-        className="w-[52px] h-[46px] absolute top-[63px] right-[80px]"
+        className="hidden lg:block w-[52px] h-[46px] absolute top-[63px] right-[80px]"
       />
 
       <Image

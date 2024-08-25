@@ -73,17 +73,17 @@ export default function PopularCourse() {
   };
 
   return (
-    <div className="bg-secondary-500 min-h-[862px] relative text-center text-white mb-[100px]">
-      <h2 className="text-4xl font-semibold pb-[10px] pt-[76px]">
+    <div className="bg-secondary-500 min-h-[662px] lg:min-h-[862px] relative text-center text-white mb-[100px]">
+      <h2 className="text-base lg:text-4xl font-semibold pb-[10px] pt-[81px] lg:pt-[76px]">
         Popular courses of the week
       </h2>
-      <p className="pb-12 pt-2 max-w-[347px] mx-auto">
+      <p className="text-xs lg:text-base pb-12 pt-5 lg:pt-2 max-w-[347px] mx-auto">
         List of the most popular lists that are often studied by our members
       </p>
 
-      <div className="relative flex justify-center items-center w-full max-w-[1281px] mx-auto">
+      <div className="relative flex justify-center items-center w-full max-w-[1281px] mx-auto pl-3 lg:pl-0">
         <button
-          className="absolute -left-6 z-10 bg-gray-300 p-2 rounded-full shadow-md"
+          className="hidden lg:block absolute -left-6 z-10 bg-gray-300 p-2 rounded-full shadow-md"
           onClick={scrollLeft}
         >
           <div className="p-3 rounded-full bg-white">
@@ -92,14 +92,14 @@ export default function PopularCourse() {
         </button>
         <div
           ref={scrollContainerRef}
-          className="flex justify-start items-center gap-5 overflow-x-scroll no-scrollbar w-full"
+          className="flex justify-start items-center gap-8 lg:gap-5 overflow-x-scroll no-scrollbar w-full"
         >
           {allCourses.map((item) => (
             <CourseCard key={item.id} item={item} />
           ))}
         </div>
         <button
-          className="absolute -right-5 z-10 bg-gray-300 p-2 rounded-full shadow-md"
+          className="hidden lg:block absolute -right-6 z-10 bg-gray-300 p-2 rounded-full shadow-md"
           onClick={scrollRight}
         >
           <div className="p-3 rounded-full bg-secondary-500">
@@ -113,7 +113,7 @@ export default function PopularCourse() {
         alt="SeconderySmallDesign"
         width={52}
         height={46}
-        className="w-[52px] h-[46px] absolute top-[128px] left-[176px]"
+        className="w-[52px] h-[46px] absolute top-9 lg:top-[128px] left-5 lg:left-[176px]"
       />
 
       <Image
@@ -121,7 +121,7 @@ export default function PopularCourse() {
         alt="SmallCircleDesign"
         width={24}
         height={25}
-        className="w-[24px] h-[25px] absolute top-[103px] right-[188px]"
+        className="w-[24px] h-[25px] absolute top-[59px] lg:top-[103px] right-[12px] lg:right-[188px]"
       />
     </div>
   );
